@@ -16,5 +16,10 @@ namespace SimpleSystem
         {
             InitializeComponent();
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            label1.Text = "Marosini je sad gejko";
+        }
     }
 }
