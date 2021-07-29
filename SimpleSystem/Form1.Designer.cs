@@ -53,7 +53,6 @@ namespace SimpleSystem
             this.button1.TabIndex = 1;
             this.button1.Text = "CLICK TO MAROSINI GAYKO";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // Form1

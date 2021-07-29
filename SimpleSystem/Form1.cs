@@ -22,10 +22,5 @@ namespace SimpleSystem
         {
             label1.Text = "Marosini je sad gejko";
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
