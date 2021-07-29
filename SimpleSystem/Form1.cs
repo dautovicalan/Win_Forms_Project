@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//ALAN JE MALI BOSANAC I VOLI PRIMAT U GUZU VELIKE PORCIJE
 namespace SimpleSystem
 {
     public partial class Form1 : Form
@@ -20,6 +21,11 @@ namespace SimpleSystem
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
             label1.Text = "Marosini je sad gejko";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
