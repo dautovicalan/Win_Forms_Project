@@ -18,9 +18,14 @@ namespace SimpleSystem
             InitializeComponent();
         }
 
-        private void button1_MouseClick(object sender, MouseEventArgs e)
+        private void NewReservationButton_Click(object sender, EventArgs e)
         {
-            label1.Text = "Marosini je sad gejko";
+
+        }
+
+        private void ExitApplicationButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

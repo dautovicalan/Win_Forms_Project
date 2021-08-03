@@ -29,51 +29,122 @@ namespace SimpleSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.GoBackButton = new FontAwesome.Sharp.IconButton();
+            this.CheckCurrentReservationButton = new System.Windows.Forms.Button();
+            this.NewReservationButton = new System.Windows.Forms.Button();
+            this.SummaryLabel = new System.Windows.Forms.Label();
+            this.ExitApplicationButton = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.GoBackButton);
+            this.panel1.Controls.Add(this.CheckCurrentReservationButton);
+            this.panel1.Controls.Add(this.NewReservationButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 657);
+            this.panel1.TabIndex = 0;
+            // 
+            // GoBackButton
+            // 
+            this.GoBackButton.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.GoBackButton.IconColor = System.Drawing.Color.Red;
+            this.GoBackButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.GoBackButton.Location = new System.Drawing.Point(12, 602);
+            this.GoBackButton.Name = "GoBackButton";
+            this.GoBackButton.Size = new System.Drawing.Size(48, 47);
+            this.GoBackButton.TabIndex = 2;
+            this.GoBackButton.UseVisualStyleBackColor = true;
+            // 
+            // CheckCurrentReservationButton
+            // 
+            this.CheckCurrentReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckCurrentReservationButton.Location = new System.Drawing.Point(44, 190);
+            this.CheckCurrentReservationButton.Name = "CheckCurrentReservationButton";
+            this.CheckCurrentReservationButton.Size = new System.Drawing.Size(200, 85);
+            this.CheckCurrentReservationButton.TabIndex = 1;
+            this.CheckCurrentReservationButton.Text = "PREGLED REZERVACIJA";
+            this.CheckCurrentReservationButton.UseVisualStyleBackColor = true;
+            // 
+            // NewReservationButton
+            // 
+            this.NewReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewReservationButton.Location = new System.Drawing.Point(44, 35);
+            this.NewReservationButton.Name = "NewReservationButton";
+            this.NewReservationButton.Size = new System.Drawing.Size(200, 85);
+            this.NewReservationButton.TabIndex = 0;
+            this.NewReservationButton.Text = "NOVA REZERVACIJA";
+            this.NewReservationButton.UseVisualStyleBackColor = true;
+            this.NewReservationButton.Click += new System.EventHandler(this.NewReservationButton_Click);
+            // 
+            // SummaryLabel
+            // 
+            this.SummaryLabel.Font = new System.Drawing.Font("PMingLiU-ExtB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummaryLabel.Location = new System.Drawing.Point(306, 9);
+            this.SummaryLabel.Name = "SummaryLabel";
+            this.SummaryLabel.Size = new System.Drawing.Size(322, 57);
+            this.SummaryLabel.TabIndex = 1;
+            this.SummaryLabel.Text = "SUMMARY";
+            this.SummaryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ExitApplicationButton
+            // 
+            this.ExitApplicationButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitApplicationButton.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
+            this.ExitApplicationButton.IconColor = System.Drawing.Color.Red;
+            this.ExitApplicationButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ExitApplicationButton.Location = new System.Drawing.Point(1076, 602);
+            this.ExitApplicationButton.Name = "ExitApplicationButton";
+            this.ExitApplicationButton.Size = new System.Drawing.Size(56, 47);
+            this.ExitApplicationButton.TabIndex = 2;
+            this.ExitApplicationButton.UseVisualStyleBackColor = false;
+            this.ExitApplicationButton.Click += new System.EventHandler(this.ExitApplicationButton_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 65);
+            this.label1.Font = new System.Drawing.Font("MingLiU-ExtB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(337, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Marin je gayko maleni";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(226, 181);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(318, 102);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "CLICK TO MAROSINI GAYKO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.label1.Size = new System.Drawing.Size(364, 85);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "TRENUTNO GOSTIJU U APARTMANU: ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 360);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.Salmon;
+            this.ClientSize = new System.Drawing.Size(1140, 657);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.ExitApplicationButton);
+            this.Controls.Add(this.SummaryLabel);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(1160, 700);
+            this.MinimumSize = new System.Drawing.Size(1160, 700);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button CheckCurrentReservationButton;
+        private System.Windows.Forms.Button NewReservationButton;
+        private FontAwesome.Sharp.IconButton GoBackButton;
+        private System.Windows.Forms.Label SummaryLabel;
+        private FontAwesome.Sharp.IconButton ExitApplicationButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }
 
