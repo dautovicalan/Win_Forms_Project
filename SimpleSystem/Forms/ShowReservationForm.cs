@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SimpleSystem.Forms
 {
-    public partial class MainMenuForm : Form
+    public partial class ShowReservationForm : Form
     {
-
-        public MainMenuForm()
+        public ShowReservationForm()
         {
             InitializeComponent();
-        }
-
-        private void QuitApplicationButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

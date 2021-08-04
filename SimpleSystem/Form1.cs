@@ -20,17 +20,6 @@ namespace SimpleSystem
             LoadForm(new MainMenuForm());
         }
 
-        //Button Creation still in progress - Alan
-        public void CreateExitButtonDelegate()
-        {
-            Button ExitButton = new Button();
-            this.Controls.Add(ExitButton);
-            ExitButton.Text = "EXIT";
-            ExitButton.Location = new Point(70, 70);
-            ExitButton.Size = new Size(50, 100);
-            ExitButton.Location = new Point(20, 50);
-        }
-
         /// <summary>
         /// Loading other forms to the main form (Form1).
         /// Function parametar is an object
@@ -57,10 +46,15 @@ namespace SimpleSystem
         {
             LoadForm(new ReservationForm());
         }
-
+        private void CheckCurrentReservationButton_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ShowReservationForm());
+        }
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             LoadForm(new MainMenuForm());
         }
+
+        
     }
 }

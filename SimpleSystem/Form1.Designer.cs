@@ -73,6 +73,7 @@ namespace SimpleSystem
             this.CheckCurrentReservationButton.TabIndex = 1;
             this.CheckCurrentReservationButton.Text = "PREGLED REZERVACIJA";
             this.CheckCurrentReservationButton.UseVisualStyleBackColor = true;
+            this.CheckCurrentReservationButton.Click += new System.EventHandler(this.CheckCurrentReservationButton_Click);
             // 
             // NewReservationButton
             // 
