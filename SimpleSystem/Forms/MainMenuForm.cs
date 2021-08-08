@@ -12,7 +12,6 @@ namespace SimpleSystem.Forms
 {
     public partial class MainMenuForm : Form
     {
-
         public MainMenuForm()
         {
             InitializeComponent();
@@ -21,6 +20,12 @@ namespace SimpleSystem.Forms
         private void QuitApplicationButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+            var reservation = new Reservation();
+            this.ShowAllReservation.Text = reservation.GetAllReservation().ToString();
         }
     }
 }

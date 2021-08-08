@@ -29,36 +29,45 @@ namespace SimpleSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.DataGridSql = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridSql)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // DataGridSql
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ja sam show reservation";
+            this.DataGridSql.AllowUserToAddRows = false;
+            this.DataGridSql.AllowUserToDeleteRows = false;
+            this.DataGridSql.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridSql.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridSql.Location = new System.Drawing.Point(0, 0);
+            this.DataGridSql.Name = "DataGridSql";
+            this.DataGridSql.ReadOnly = true;
+            this.DataGridSql.RowHeadersWidth = 62;
+            this.DataGridSql.RowTemplate.Height = 28;
+            this.DataGridSql.Size = new System.Drawing.Size(1251, 985);
+            this.DataGridSql.TabIndex = 0;
+            this.DataGridSql.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridSql_CellContentDoubleClick);
             // 
             // ShowReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 929);
-            this.Controls.Add(this.label1);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1251, 985);
+            this.Controls.Add(this.DataGridSql);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1251, 985);
             this.MinimumSize = new System.Drawing.Size(1251, 985);
             this.Name = "ShowReservationForm";
             this.Text = "ShowReservationForm";
+            this.Load += new System.EventHandler(this.ShowReservationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridSql)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView DataGridSql;
     }
 }

@@ -17,7 +17,6 @@ namespace SimpleSystem
         public Form1()
         {
             InitializeComponent();
-            LoadForm(new MainMenuForm());
         }
 
         /// <summary>
@@ -47,7 +46,7 @@ namespace SimpleSystem
             LoadForm(new ReservationForm());
         }
         private void CheckCurrentReservationButton_Click(object sender, EventArgs e)
-        {
+        { 
             LoadForm(new ShowReservationForm());
         }
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -55,6 +54,13 @@ namespace SimpleSystem
             LoadForm(new MainMenuForm());
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Maximazing form to original size
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+
+            LoadForm(new MainMenuForm());
+        }
     }
 }

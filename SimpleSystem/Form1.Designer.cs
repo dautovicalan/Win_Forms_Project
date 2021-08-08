@@ -39,7 +39,7 @@ namespace SimpleSystem
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.panel1.BackColor = System.Drawing.Color.Purple;
             this.panel1.Controls.Add(this.GoBackButton);
             this.panel1.Controls.Add(this.CheckCurrentReservationButton);
             this.panel1.Controls.Add(this.NewReservationButton);
@@ -65,30 +65,33 @@ namespace SimpleSystem
             // 
             // CheckCurrentReservationButton
             // 
+            this.CheckCurrentReservationButton.BackColor = System.Drawing.Color.MediumPurple;
             this.CheckCurrentReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckCurrentReservationButton.Location = new System.Drawing.Point(66, 292);
+            this.CheckCurrentReservationButton.Location = new System.Drawing.Point(13, 298);
             this.CheckCurrentReservationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CheckCurrentReservationButton.Name = "CheckCurrentReservationButton";
             this.CheckCurrentReservationButton.Size = new System.Drawing.Size(300, 131);
             this.CheckCurrentReservationButton.TabIndex = 1;
             this.CheckCurrentReservationButton.Text = "PREGLED REZERVACIJA";
-            this.CheckCurrentReservationButton.UseVisualStyleBackColor = true;
+            this.CheckCurrentReservationButton.UseVisualStyleBackColor = false;
             this.CheckCurrentReservationButton.Click += new System.EventHandler(this.CheckCurrentReservationButton_Click);
             // 
             // NewReservationButton
             // 
+            this.NewReservationButton.BackColor = System.Drawing.Color.MediumPurple;
             this.NewReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewReservationButton.Location = new System.Drawing.Point(66, 54);
+            this.NewReservationButton.Location = new System.Drawing.Point(128, 147);
             this.NewReservationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewReservationButton.Name = "NewReservationButton";
             this.NewReservationButton.Size = new System.Drawing.Size(300, 131);
             this.NewReservationButton.TabIndex = 0;
             this.NewReservationButton.Text = "NOVA REZERVACIJA";
-            this.NewReservationButton.UseVisualStyleBackColor = true;
+            this.NewReservationButton.UseVisualStyleBackColor = false;
             this.NewReservationButton.Click += new System.EventHandler(this.NewReservationButton_Click);
             // 
             // MainPanel
             // 
+            this.MainPanel.BackColor = System.Drawing.Color.Indigo;
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(450, 0);
             this.MainPanel.Name = "MainPanel";
@@ -108,6 +111,7 @@ namespace SimpleSystem
             this.MinimumSize = new System.Drawing.Size(1727, 1018);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
