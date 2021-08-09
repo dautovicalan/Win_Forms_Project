@@ -16,7 +16,12 @@ namespace SimpleSystem
     {
         public Form1()
         {
-            InitializeComponent();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            if (login.StartProgram())
+            {
+                InitializeComponent();
+            }
         }
 
         /// <summary>
@@ -57,8 +62,7 @@ namespace SimpleSystem
         private void Form1_Load(object sender, EventArgs e)
         {
             //Maximazing form to original size
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
 
             LoadForm(new MainMenuForm());
         }

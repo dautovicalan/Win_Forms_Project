@@ -168,6 +168,7 @@ namespace SimpleSystem.Forms
             this.Controls.Add(this.NameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailReservationInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailReservationInfoForm";
             this.ResumeLayout(false);
             this.PerformLayout();

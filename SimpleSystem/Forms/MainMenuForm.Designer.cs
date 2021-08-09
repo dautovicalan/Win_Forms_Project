@@ -40,7 +40,7 @@ namespace SimpleSystem.Forms
             // 
             this.ShowAllReservation.AutoSize = true;
             this.ShowAllReservation.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowAllReservation.Location = new System.Drawing.Point(725, 134);
+            this.ShowAllReservation.Location = new System.Drawing.Point(162, 219);
             this.ShowAllReservation.Name = "ShowAllReservation";
             this.ShowAllReservation.Size = new System.Drawing.Size(94, 41);
             this.ShowAllReservation.TabIndex = 0;
@@ -98,7 +98,6 @@ namespace SimpleSystem.Forms
             this.Controls.Add(this.QuitApplicationButton);
             this.Controls.Add(this.ShowAllReservation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1251, 985);
             this.MinimumSize = new System.Drawing.Size(1251, 985);
             this.Name = "MainMenuForm";
             this.Text = "MainMenuForm";

@@ -66,7 +66,7 @@ namespace SimpleSystem
             // CheckCurrentReservationButton
             // 
             this.CheckCurrentReservationButton.BackColor = System.Drawing.Color.MediumPurple;
-            this.CheckCurrentReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckCurrentReservationButton.Font = new System.Drawing.Font("Bauhaus 93", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckCurrentReservationButton.Location = new System.Drawing.Point(13, 298);
             this.CheckCurrentReservationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CheckCurrentReservationButton.Name = "CheckCurrentReservationButton";
@@ -79,7 +79,9 @@ namespace SimpleSystem
             // NewReservationButton
             // 
             this.NewReservationButton.BackColor = System.Drawing.Color.MediumPurple;
-            this.NewReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewReservationButton.Font = new System.Drawing.Font("Bauhaus 93", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewReservationButton.Image = global::SimpleSystem.Properties.Resources.icons8_shopping_cart_24;
+            this.NewReservationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewReservationButton.Location = new System.Drawing.Point(128, 147);
             this.NewReservationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewReservationButton.Name = "NewReservationButton";
@@ -110,6 +112,7 @@ namespace SimpleSystem
             this.MaximumSize = new System.Drawing.Size(1727, 1045);
             this.MinimumSize = new System.Drawing.Size(1727, 1018);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
