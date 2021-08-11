@@ -66,5 +66,36 @@ namespace SimpleSystem
 
             LoadForm(new MainMenuForm());
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            LoadForm(new MainMenuForm());
+        }
+
+        private void NewReservationButton_MouseHover(object sender, EventArgs e)
+        {
+            this.NewReservationButton.BackColor = Color.Aqua;
+        }
+
+        private void NewReservationButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.NewReservationButton.BackColor = Color.MediumPurple;
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CheckCurrentReservationButton_MouseHover(object sender, EventArgs e)
+        {
+            this.CheckCurrentReservationButton.BackColor = Color.Aqua;
+        }
+
+        private void CheckCurrentReservationButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.CheckCurrentReservationButton.BackColor = Color.MediumPurple;
+
+        }
     }
 }

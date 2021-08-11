@@ -64,5 +64,18 @@ namespace SimpleSystem.Forms
             ShowReservationForm srf = (ShowReservationForm) Application.OpenForms["ShowReservationForm"];
             srf.ShowSqlData();
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            var reservation = new Reservation
+            {
+                Name = this.NameTextBox.Text,
+                Surname = this.SurnameTextBox.Text,
+                GuestNumber = Convert.ToInt16(this.GuestNumberTextBox.Text),
+                DateFrom = Convert.ToDateTime(this.DateFromTextBox.Text),
+                DateTo = Convert.ToDateTime(this.DateToTextBox.Text)
+            };
+            reservation.DeleteQueryFromDataBase(ReservationId);
+        }
     }
 }

@@ -176,8 +176,8 @@ namespace SimpleSystem
             // 
             // ReservationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1251, 985);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CreateReservationButton);

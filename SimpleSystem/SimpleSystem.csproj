@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -159,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-shopping-cart-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-instagram-logo.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

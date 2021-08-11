@@ -63,9 +63,59 @@ namespace SimpleSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_instagram_logo {
+            get {
+                object obj = ResourceManager.GetObject("icons8-instagram-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reservation_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reservation-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shopping_cart_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shopping-cart-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_username_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-username-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,6 +41,7 @@ namespace SimpleSystem.Forms
             this.FinishAndSaveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -149,11 +150,22 @@ namespace SimpleSystem.Forms
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(655, 266);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(141, 58);
+            this.DeleteButton.TabIndex = 13;
+            this.DeleteButton.Text = "DELETE";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
             // DetailReservationInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(936, 524);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FinishAndSaveButton);
@@ -188,5 +200,6 @@ namespace SimpleSystem.Forms
         private System.Windows.Forms.Button FinishAndSaveButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

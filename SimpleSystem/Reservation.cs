@@ -43,6 +43,16 @@ namespace SimpleSystem
             con.Close();
         }
 
+        public void DeleteQueryFromDataBase(int reservationId)
+        {
+            con.Open();
+            string query = "DELETE FROM Reservation WHERE ReservationId = '"+reservationId+"'";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Succefuly deleted");
+            con.Close();
+        }
+
         public int GetAllReservation()
         {
             string query = "SELECT COUNT(*) FROM Reservation";
