@@ -19,11 +19,6 @@ namespace SimpleSystem.Forms
             InitializeComponent();
         }
 
-        private void QuitApplicationButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
             this.ShowAllReservation.Text = ReservationCount.ToString();

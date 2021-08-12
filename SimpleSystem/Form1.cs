@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,18 @@ namespace SimpleSystem
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
         public Form1()
         {
             LoginForm login = new LoginForm();
@@ -21,6 +34,7 @@ namespace SimpleSystem
             if (login.StartProgram())
             {
                 InitializeComponent();
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             }
         }
 
@@ -48,10 +62,12 @@ namespace SimpleSystem
 
         private void NewReservationButton_Click(object sender, EventArgs e)
         {
+            NewReservationButton.BackColor = Color.FromArgb(46, 51, 73);
             LoadForm(new ReservationForm());
         }
         private void CheckCurrentReservationButton_Click(object sender, EventArgs e)
         { 
+            CheckCurrentReservationButton.BackColor = Color.FromArgb(46, 51, 73);
             LoadForm(new ShowReservationForm());
         }
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -61,9 +77,6 @@ namespace SimpleSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Maximazing form to original size
-            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-
             LoadForm(new MainMenuForm());
         }
 
@@ -72,30 +85,30 @@ namespace SimpleSystem
             LoadForm(new MainMenuForm());
         }
 
-        private void NewReservationButton_MouseHover(object sender, EventArgs e)
-        {
-            this.NewReservationButton.BackColor = Color.Aqua;
-        }
-
-        private void NewReservationButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.NewReservationButton.BackColor = Color.MediumPurple;
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void CheckCurrentReservationButton_MouseHover(object sender, EventArgs e)
+        private void NewReservationButton_Leave(object sender, EventArgs e)
         {
-            this.CheckCurrentReservationButton.BackColor = Color.Aqua;
+            NewReservationButton.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void CheckCurrentReservationButton_MouseLeave(object sender, EventArgs e)
+        private void CheckCurrentReservationButton_Leave(object sender, EventArgs e)
         {
-            this.CheckCurrentReservationButton.BackColor = Color.MediumPurple;
+            CheckCurrentReservationButton.BackColor = Color.FromArgb(24, 30, 54);
+        }
 
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsButton.BackColor = Color.FromArgb(46, 51, 73);
+            LoadForm(new SettingsForm());
+        }
+
+        private void SettingsButton_Leave(object sender, EventArgs e)
+        {
+            SettingsButton.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }

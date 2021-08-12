@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,14 +41,14 @@ namespace SimpleSystem.Forms
             this.DataGridSql.BorderStyle = BorderStyle.None;
             this.DataGridSql.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             this.DataGridSql.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridSql.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            this.DataGridSql.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 126, 249);
             this.DataGridSql.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            this.DataGridSql.BackgroundColor = Color.FromArgb(30, 30, 30);
+            this.DataGridSql.BackgroundColor = Color.FromArgb(46, 51, 73);
             this.DataGridSql.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DataGridSql.EnableHeadersVisualStyles = false;
             this.DataGridSql.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             this.DataGridSql.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
-            this.DataGridSql.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            this.DataGridSql.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 51, 73);
             this.DataGridSql.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             this.DataGridSql.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }

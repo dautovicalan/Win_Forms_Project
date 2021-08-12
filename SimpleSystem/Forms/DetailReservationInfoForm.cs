@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,10 +18,8 @@ namespace SimpleSystem.Forms
             string guestNumber, string dateFrom, string dateTo, string countDays, string price, string parkingSpot)
         {
             InitializeComponent();
+
             this.ReservationId = Convert.ToInt16(reservationId);
-
-            this.label1.Text = ReservationId.ToString();
-
             this.NameTextBox.Text = reservationName;
             this.SurnameTextBox.Text = reservationSurname;
             this.GuestNumberTextBox.Text = guestNumber;
@@ -31,19 +30,7 @@ namespace SimpleSystem.Forms
             this.ParkingSpotTextBox.Text = (parkingSpot);
         }
 
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            this.NameTextBox.ReadOnly = false;
-            this.SurnameTextBox.ReadOnly = false;
-            this.GuestNumberTextBox.ReadOnly = false;
-            this.DateFromTextBox.ReadOnly = false;
-            this.DateToTextBox.ReadOnly = false;
-            this.DayCountTextBox.ReadOnly = false;
-            this.PriceTextBox.ReadOnly = false;
-            this.ParkingSpotTextBox.ReadOnly = false;
-
-
-        }
+       
 
         private void FinishAndSaveButton_Click(object sender, EventArgs e)
         {
@@ -56,13 +43,13 @@ namespace SimpleSystem.Forms
                 DateTo = Convert.ToDateTime(this.DateToTextBox.Text)
             };
             reservation.UpdateDataBase(ReservationId);
+            ShowReservationForm srf = (ShowReservationForm) Application.OpenForms["ShowReservationForm"];
+            srf.ShowSqlData();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            ShowReservationForm srf = (ShowReservationForm) Application.OpenForms["ShowReservationForm"];
-            srf.ShowSqlData();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -76,6 +63,21 @@ namespace SimpleSystem.Forms
                 DateTo = Convert.ToDateTime(this.DateToTextBox.Text)
             };
             reservation.DeleteQueryFromDataBase(ReservationId);
+            this.Close();
+            ShowReservationForm srf = (ShowReservationForm) Application.OpenForms["ShowReservationForm"];
+            srf.ShowSqlData();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            this.NameTextBox.ReadOnly = false;
+            this.SurnameTextBox.ReadOnly = false;
+            this.GuestNumberTextBox.ReadOnly = false;
+            this.DateFromTextBox.ReadOnly = false;
+            this.DateToTextBox.ReadOnly = false;
+            this.DayCountTextBox.ReadOnly = false;
+            this.PriceTextBox.ReadOnly = false;
+            this.ParkingSpotTextBox.ReadOnly = false;
         }
     }
 }

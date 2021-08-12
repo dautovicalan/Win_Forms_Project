@@ -101,22 +101,22 @@ namespace SimpleSystem.Forms
             // UserNameTextBox
             // 
             this.UserNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UserNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameTextBox.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.UserNameTextBox.Location = new System.Drawing.Point(100, 327);
+            this.UserNameTextBox.Location = new System.Drawing.Point(86, 327);
             this.UserNameTextBox.Name = "UserNameTextBox";
-            this.UserNameTextBox.Size = new System.Drawing.Size(270, 25);
+            this.UserNameTextBox.Size = new System.Drawing.Size(270, 34);
             this.UserNameTextBox.TabIndex = 8;
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.PasswordTextBox.Location = new System.Drawing.Point(100, 466);
+            this.PasswordTextBox.Location = new System.Drawing.Point(86, 457);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(270, 25);
+            this.PasswordTextBox.Size = new System.Drawing.Size(270, 34);
             this.PasswordTextBox.TabIndex = 9;
             // 
             // WrongPasswordLabel
@@ -143,7 +143,7 @@ namespace SimpleSystem.Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SimpleSystem.Properties.Resources.icons8_username_50;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 311);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 318);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -165,6 +165,7 @@ namespace SimpleSystem.Forms
             this.AcceptButton = this.LogInButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(460, 686);
             this.Controls.Add(this.WrongPasswordLabel);
             this.Controls.Add(this.PasswordTextBox);

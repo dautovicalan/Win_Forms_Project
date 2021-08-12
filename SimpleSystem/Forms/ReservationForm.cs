@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace SimpleSystem
 {
@@ -37,6 +38,19 @@ namespace SimpleSystem
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ClearAllButton_Click(object sender, EventArgs e)
+        {
+            this.NameTextbBox.Clear();
+            this.SurnameTextBox.Clear();
+            this.GuestNumberTextBox.Clear();
+            this.ParkingSpotTextBox.Clear();
+        }
+
+        private void ReservationForm_Load(object sender, EventArgs e)
+        {
+            this.NameTextbBox.Select();
         }
     }
 }
