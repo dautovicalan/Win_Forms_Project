@@ -45,6 +45,8 @@ namespace SimpleSystem.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.SaveFileButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DeleteButton = new System.Windows.Forms.Button();
@@ -229,6 +231,27 @@ namespace SimpleSystem.Forms
             this.label9.TabIndex = 21;
             this.label9.Text = "Parking Spot";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "PDF File | *.pdf";
+            // 
+            // SaveFileButton
+            // 
+            this.SaveFileButton.FlatAppearance.BorderSize = 0;
+            this.SaveFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveFileButton.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveFileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.SaveFileButton.Image = global::SimpleSystem.Properties.Resources.icons8_save_as_48;
+            this.SaveFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveFileButton.Location = new System.Drawing.Point(733, 205);
+            this.SaveFileButton.Name = "SaveFileButton";
+            this.SaveFileButton.Size = new System.Drawing.Size(205, 81);
+            this.SaveFileButton.TabIndex = 23;
+            this.SaveFileButton.Text = "Save As PDF";
+            this.SaveFileButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SaveFileButton.UseVisualStyleBackColor = true;
+            this.SaveFileButton.Click += new System.EventHandler(this.PrintToPdfButton_Click);
+            // 
             // EditButton
             // 
             this.EditButton.FlatAppearance.BorderSize = 0;
@@ -314,6 +337,7 @@ namespace SimpleSystem.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(936, 524);
+            this.Controls.Add(this.SaveFileButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
@@ -367,5 +391,7 @@ namespace SimpleSystem.Forms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button SaveFileButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

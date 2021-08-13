@@ -31,14 +31,15 @@ namespace SimpleSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.ExitButton = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.GoBackButton = new FontAwesome.Sharp.IconButton();
             this.CheckCurrentReservationButton = new System.Windows.Forms.Button();
             this.NewReservationButton = new System.Windows.Forms.Button();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.CursorPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@ namespace SimpleSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.CursorPanel);
             this.panel1.Controls.Add(this.SettingsButton);
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.panel2);
@@ -58,24 +60,6 @@ namespace SimpleSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 1018);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 100);
-            this.panel2.TabIndex = 0;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(450, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1277, 1018);
-            this.MainPanel.TabIndex = 1;
             // 
             // SettingsButton
             // 
@@ -98,7 +82,7 @@ namespace SimpleSystem
             // 
             this.ExitButton.FlatAppearance.BorderSize = 0;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.IconChar = FontAwesome.Sharp.IconChar.ExpandArrowsAlt;
+            this.ExitButton.IconChar = FontAwesome.Sharp.IconChar.Map;
             this.ExitButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.ExitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ExitButton.Location = new System.Drawing.Point(359, 935);
@@ -107,6 +91,15 @@ namespace SimpleSystem
             this.ExitButton.TabIndex = 3;
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(450, 100);
+            this.panel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -177,6 +170,24 @@ namespace SimpleSystem
             this.NewReservationButton.Click += new System.EventHandler(this.NewReservationButton_Click);
             this.NewReservationButton.Leave += new System.EventHandler(this.NewReservationButton_Leave);
             // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(450, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1277, 1018);
+            this.MainPanel.TabIndex = 1;
+            // 
+            // CursorPanel
+            // 
+            this.CursorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.CursorPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.CursorPanel.Location = new System.Drawing.Point(0, 193);
+            this.CursorPanel.Name = "CursorPanel";
+            this.CursorPanel.Size = new System.Drawing.Size(3, 100);
+            this.CursorPanel.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -210,6 +221,7 @@ namespace SimpleSystem
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton ExitButton;
         private System.Windows.Forms.Button SettingsButton;
+        private System.Windows.Forms.Panel CursorPanel;
     }
 }
 

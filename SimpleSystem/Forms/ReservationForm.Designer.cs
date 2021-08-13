@@ -42,8 +42,8 @@ namespace SimpleSystem
             this.label7 = new System.Windows.Forms.Label();
             this.ParkingSpotTextBox = new System.Windows.Forms.TextBox();
             this.ClearAllButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CreateReservationButton = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,16 +189,6 @@ namespace SimpleSystem
             this.ClearAllButton.UseVisualStyleBackColor = true;
             this.ClearAllButton.Click += new System.EventHandler(this.ClearAllButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SimpleSystem.Properties.Resources.icons8_instagram_logo_50__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1149, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // CreateReservationButton
             // 
             this.CreateReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -218,14 +208,24 @@ namespace SimpleSystem
             this.CreateReservationButton.UseVisualStyleBackColor = false;
             this.CreateReservationButton.Click += new System.EventHandler(this.CreateReservationButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SimpleSystem.Properties.Resources.icons8_instagram_logo_48;
+            this.pictureBox1.Location = new System.Drawing.Point(1149, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1251, 985);
-            this.Controls.Add(this.ClearAllButton);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ClearAllButton);
             this.Controls.Add(this.CreateReservationButton);
             this.Controls.Add(this.ParkingSpotTextBox);
             this.Controls.Add(this.label7);
@@ -266,7 +266,7 @@ namespace SimpleSystem
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ParkingSpotTextBox;
         private FontAwesome.Sharp.IconButton CreateReservationButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ClearAllButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

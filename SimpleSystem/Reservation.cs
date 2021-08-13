@@ -11,7 +11,7 @@ namespace SimpleSystem
     class Reservation
     {
         #region Sql Part
-        private SqlConnection con =
+        private readonly SqlConnection con =
             new SqlConnection(@"Data Source=ALAN-LAPTOP;Initial Catalog=SimpleAppDataBase;Integrated Security=True;");
 
         private SqlCommand cmd;
@@ -27,7 +27,10 @@ namespace SimpleSystem
             MessageBox.Show("Succfully inserted");
             con.Close();
         }
-
+        /// <summary>
+        /// Default update database requiring only Reservation Id
+        /// </summary>
+        /// <param name="reservationId"></param>
         public void UpdateDataBase(int reservationId)
         {
             con.Open();

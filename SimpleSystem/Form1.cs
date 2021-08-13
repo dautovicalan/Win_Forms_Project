@@ -35,6 +35,9 @@ namespace SimpleSystem
             {
                 InitializeComponent();
                 Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+                CursorPanel.Height = NewReservationButton.Height;
+                CursorPanel.Top = NewReservationButton.Top;
+                CursorPanel.Left = NewReservationButton.Left;
             }
         }
 
@@ -62,11 +65,17 @@ namespace SimpleSystem
 
         private void NewReservationButton_Click(object sender, EventArgs e)
         {
+            CursorPanel.Height = NewReservationButton.Height;
+            CursorPanel.Top = NewReservationButton.Top;
+            CursorPanel.Left = NewReservationButton.Left;
             NewReservationButton.BackColor = Color.FromArgb(46, 51, 73);
             LoadForm(new ReservationForm());
         }
         private void CheckCurrentReservationButton_Click(object sender, EventArgs e)
         { 
+            CursorPanel.Height = CheckCurrentReservationButton.Height;
+            CursorPanel.Top = CheckCurrentReservationButton.Top;
+            CursorPanel.Left = CheckCurrentReservationButton.Left;
             CheckCurrentReservationButton.BackColor = Color.FromArgb(46, 51, 73);
             LoadForm(new ShowReservationForm());
         }
@@ -102,6 +111,9 @@ namespace SimpleSystem
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
+            CursorPanel.Height = SettingsButton.Height;
+            CursorPanel.Top = SettingsButton.Top;
+            CursorPanel.Left = SettingsButton.Left;
             SettingsButton.BackColor = Color.FromArgb(46, 51, 73);
             LoadForm(new SettingsForm());
         }

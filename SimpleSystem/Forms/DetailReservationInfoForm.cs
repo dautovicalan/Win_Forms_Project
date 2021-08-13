@@ -8,6 +8,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System.IO;
+using iText.Kernel.Geom;
 
 namespace SimpleSystem.Forms
 {
@@ -78,6 +84,34 @@ namespace SimpleSystem.Forms
             this.DayCountTextBox.ReadOnly = false;
             this.PriceTextBox.ReadOnly = false;
             this.ParkingSpotTextBox.ReadOnly = false;
+        }
+
+        private void PrintToPdfButton_Click(object sender, EventArgs e)
+        {
+            var reservation = new Reservation
+            {
+                Name = this.NameTextBox.Text,
+                Surname = this.SurnameTextBox.Text,
+                GuestNumber = Convert.ToInt16(this.GuestNumberTextBox.Text),
+                DateFrom = Convert.ToDateTime(this.DateFromTextBox.Text),
+                DateTo = Convert.ToDateTime(this.DateToTextBox.Text)
+            };
+            saveFileDialog1.ShowDialog();
+            using (FileStream stream = new FileStream( saveFileDialog1.FileName+ ".pdf", FileMode.Create))
+            {
+                PdfWriter writer = new PdfWriter(stream);
+                PdfDocument pdf = new PdfDocument(writer);
+                Document document = new Document(pdf);
+                Paragraph header = new Paragraph("HEADER")
+                    .SetTextAlignment(TextAlignment.CENTER)
+                    .SetFontSize(20);
+                Paragraph p1 = new Paragraph(reservation.ToString())
+                    .SetFontSize(20);
+ 
+                document.Add(header);
+                document.Add(p1);
+                document.Close();
+            }
         }
     }
 }

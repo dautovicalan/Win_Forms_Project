@@ -71,7 +71,6 @@ namespace SimpleSystem.Forms
                 DataGridSql.Rows[e.RowIndex].Cells["Price"].Value.ToString(),
                 DataGridSql.Rows[e.RowIndex].Cells["ParkingSpot"].Value.ToString());
             showInfoForm.Show();
-            
         }
     }
 }
