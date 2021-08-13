@@ -28,23 +28,23 @@ namespace SimpleSystem.Forms
         {
             this.ShowAllReservation.Text = ReservationCount.ToString();
 
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection)
-            {
-                comboBox1.Items.Add(filterInfo.Name);
-            }
+            //filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            //foreach (FilterInfo filterInfo in filterInfoCollection)
+            //{
+            //    comboBox1.Items.Add(filterInfo.Name);
+            //}
 
-            comboBox1.SelectedIndex = 0;
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
+            //comboBox1.SelectedIndex = 0;
+            //videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            //videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            //videoCaptureDevice.Start();
 
         }
 
-        private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            pictureBox1.Image = (Bitmap) eventArgs.Frame.Clone();
-        }
+        //private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        //{
+        //    pictureBox1.Image = (Bitmap) eventArgs.Frame.Clone();
+        //}
 
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {

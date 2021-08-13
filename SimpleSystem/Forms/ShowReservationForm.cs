@@ -17,7 +17,7 @@ namespace SimpleSystem.Forms
     {
         private DataSet ds = new DataSet();   
         private SqlConnection con =
-            new SqlConnection(@"Data Source=ALAN-LAPTOP;Initial Catalog=SimpleAppDataBase;Integrated Security=True;");
+            new SqlConnection(@"Data Source=DESKTOP-O3O7OSS;Initial Catalog=SimpleAppDataBase;Integrated Security=True;");
 
         private SqlDataAdapter da = new SqlDataAdapter();
 

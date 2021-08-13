@@ -21,8 +21,8 @@ namespace SimpleSystem
 
         private void CreateReservationButton_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 var reservation = new Reservation
                 {
                     Name = this.NameTextbBox.Text,
@@ -33,11 +33,11 @@ namespace SimpleSystem
                     ParkingSpot = Convert.ToChar(this.ParkingSpotTextBox.Text)
                 };
                 reservation.InsertDataToDatabase();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception exception)
+            //{
+                //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void ClearAllButton_Click(object sender, EventArgs e)

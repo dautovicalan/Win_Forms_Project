@@ -12,7 +12,7 @@ namespace SimpleSystem
     {
         #region Sql Part
         private readonly SqlConnection con =
-            new SqlConnection(@"Data Source=ALAN-LAPTOP;Initial Catalog=SimpleAppDataBase;Integrated Security=True;");
+            new SqlConnection(@"Data Source=DESKTOP-O3O7OSS;Initial Catalog=SimpleAppDataBase;Integrated Security=True;");
 
         private SqlCommand cmd;
 
@@ -20,9 +20,9 @@ namespace SimpleSystem
         {
             con.Open();
             cmd = new SqlCommand(
-                "insert into Reservation values('" + Name + "','" + Surname + "', '" +
-                GuestNumber + "', '" + DateFrom + "', '" + DateTo + "', '" +
-                Days + "', '" + Price + "', '" + ParkingSpot + "')", con);
+                "insert into Reservation values('" + @Name + "','" + @Surname + "', '" +
+                @GuestNumber + "', '" + @DateFrom + "', '" + @DateTo + "', '" +
+                @Days + "', '" + @Price + "', '" + @ParkingSpot + "')", con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Succfully inserted");
             con.Close();
